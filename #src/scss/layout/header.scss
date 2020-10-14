@@ -1,0 +1,75 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.header {
+  // background: transparent;
+  // background: red;
+  // position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 20px;
+  &-logo {
+    display: block;
+    width: 400px;
+    @media (max-width: $breakpoint-md) {
+      width: 150px;
+    }
+  }
+  &-menu {
+    
+  }
+  &-lang {
+    margin-right: 10px;
+    &__item {
+      position: relative;
+      color: $blackColor;
+      text-transform: uppercase;
+      margin: 0 15px 0 0;
+      @media (max-width: $breakpoint-md) {
+        font-size: 14px;
+        margin: 0 10px 0 0;
+      }
+      &:before {
+        content: '';
+        background: $blackColor;
+        position: absolute;
+        right: -16px;
+        top: -15%;
+        height: 130%;
+        width: 2px;
+        @media (max-width: $breakpoint-md) {
+          right: -12px;
+        }
+      }
+      &:after {
+        content: '';
+        background: $blackColor;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        opacity: 0;
+        @include transition(.3);
+      }
+      &:last-child {
+        margin: 0 0 0 15px;
+        @media (max-width: $breakpoint-md) {
+          margin: 0 0 0 10px;
+        }
+        &:before {
+          display: none;
+        }
+      }
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

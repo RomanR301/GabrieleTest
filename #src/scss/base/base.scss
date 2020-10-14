@@ -1,0 +1,21 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.--relative {
+  position: relative;
+}
+
+.full-height {
+  height: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body.active {
+  overflow: hidden;
+}
