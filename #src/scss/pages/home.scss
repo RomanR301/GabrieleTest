@@ -21,8 +21,13 @@ main {
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
   &_text {
     font-size: 50px;
+    @media (max-width: $breakpoint-md) {
+      font-size: 35px;
+    }
   }
   &_image {
     width: 80px;

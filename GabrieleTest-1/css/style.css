@@ -787,6 +787,8 @@ main {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
 }
 
 .main-screen__bottom_text {
@@ -1399,6 +1401,10 @@ main {
 
   .header-lang__item:last-child {
     margin: 0 0 0 10px;
+  }
+
+  .main-screen__bottom_text {
+    font-size: 35px;
   }
 
   .gallery-text {
